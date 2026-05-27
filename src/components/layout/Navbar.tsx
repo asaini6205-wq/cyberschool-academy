@@ -1,147 +1,130 @@
 'use client'
 
 import Link from 'next/link'
-import Image from 'next/image'
+
+import { usePathname } from 'next/navigation'
 
 export default function Navbar() {
 
+  const pathname = usePathname()
+
+  const links = [
+
+    {
+      name: 'Home',
+      path: '/',
+    },
+
+    {
+      name: 'Courses',
+      path: '/courses',
+    },
+
+    {
+      name: 'Departments',
+      path: '/departments',
+    },
+
+    {
+      name: 'Events',
+      path: '/events',
+    },
+
+    {
+      name: 'Placements',
+      path: '/placements',
+    },
+
+    {
+      name: 'Verify',
+      path: '/verify',
+    },
+
+    {
+      name: 'Blog',
+      path: '/blog',
+    },
+
+    {
+      name: 'Contact',
+      path: '/contact',
+    },
+
+  ]
+
   return (
 
-    <nav
-      className="
-        sticky
-        top-0
-        z-50
-        border-b
-        border-[var(--border)]
-        bg-[var(--bg)]/80
-        backdrop-blur-xl
-      "
-    >
+    <header className="main-navbar">
 
-      <div
-        className="
-          container-custom
-          h-20
-          flex
-          items-center
-          justify-between
-        "
-      >
+      <div className="main-navbar-container">
 
-        {/* LEFT */}
+        {/* LOGO */}
 
         <Link
           href="/"
-          className="flex items-center gap-3"
+          className="main-logo"
         >
 
-          <Image
+          <img
             src="/logo.jpeg"
             alt="CyberSchool"
-            width={44}
-            height={44}
-            className="rounded-xl object-cover"
           />
 
           <div>
 
-            <h1
-              className="
-                text-2xl
-                font-black
-                tracking-tight
-              "
-            >
-              CyberSchool
-            </h1>
+            <h2>CyberSchool</h2>
 
-            <p
-              className="
-                text-sm
-                text-[var(--text-light)]
-              "
-            >
-              Cybersecurity Academy
-            </p>
+            <p>Cybersecurity Academy</p>
 
           </div>
 
         </Link>
 
-        {/* CENTER */}
+        {/* LINKS */}
 
-        <div
-          className="
-            hidden
-            lg:flex
-            items-center
-            gap-10
-            font-medium
-            text-[15px]
-          "
-        >
+        <nav className="main-nav-links">
+
+          {
+            links.map((item) => (
+
+              <Link
+                key={item.path}
+                href={item.path}
+                className={
+                  pathname === item.path
+                    ? 'nav-link active-nav'
+                    : 'nav-link'
+                }
+              >
+
+                {item.name}
+
+              </Link>
+
+            ))
+          }
+
+        </nav>
+
+        {/* ACTIONS */}
+
+        <div className="main-nav-actions">
 
           <Link
-            href="/"
-            className="hover:text-blue-600 transition"
+            href="/login"
+            className="login-nav-btn"
           >
-            Home
+
+            Login
+
           </Link>
 
           <Link
             href="/courses"
-            className="hover:text-blue-600 transition"
+            className="enroll-nav-btn"
           >
-            Courses
-          </Link>
 
-          <Link
-            href="/events"
-            className="hover:text-blue-600 transition"
-          >
-            Events
-          </Link>
-
-          <Link
-            href="/placements"
-            className="hover:text-blue-600 transition"
-          >
-            Placements
-          </Link>
-
-          <Link
-            href="/verify"
-            className="hover:text-blue-600 transition"
-          >
-            Verify
-          </Link>
-
-        </div>
-
-        {/* RIGHT */}
-
-        <div
-          className="
-            flex
-            items-center
-            gap-4
-          "
-        >
-
-          <Link href="/login">
-
-            <button className="secondary-btn">
-              Login
-            </button>
-
-          </Link>
-
-          <Link href="/courses">
-
-            <button className="primary-btn px-6">
-              Enroll Now
-            </button>
+            Enroll Now
 
           </Link>
 
@@ -149,7 +132,8 @@ export default function Navbar() {
 
       </div>
 
-    </nav>
+    </header>
 
   )
+
 }

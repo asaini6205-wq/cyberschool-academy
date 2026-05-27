@@ -1,0 +1,478 @@
+/* =========================================
+   COURSES PAGE
+========================================= */
+
+.courses-page{
+
+  width:100%;
+
+  overflow:hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      #020617 0%,
+      #030712 100%
+    );
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.courses-hero{
+
+  position:relative;
+
+  padding-top:170px;
+  padding-bottom:100px;
+
+  overflow:hidden;
+}
+
+/* GLOW */
+
+.courses-hero::before{
+
+  content:'';
+
+  position:absolute;
+
+  top:-200px;
+  right:-200px;
+
+  width:500px;
+  height:500px;
+
+  border-radius:50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(212,175,55,0.08),
+      transparent 70%
+    );
+}
+
+/* CONTENT */
+
+.courses-hero-content{
+
+  position:relative;
+  z-index:2;
+
+  max-width:850px;
+
+  text-align:center;
+
+  margin:0 auto;
+}
+
+/* TITLE */
+
+.courses-hero-content h1{
+
+  color:white;
+
+  font-size:64px;
+  line-height:1.08;
+  font-weight:700;
+
+  letter-spacing:-1.5px;
+
+  margin-bottom:24px;
+}
+
+/* GOLD TEXT */
+
+.courses-hero-content h1 span{
+
+  color:#d4af37;
+}
+
+/* DESCRIPTION */
+
+.courses-hero-content p{
+
+  max-width:760px;
+
+  margin:0 auto;
+
+  color:#aeb8c7;
+
+  font-size:19px;
+  line-height:1.9;
+}
+
+/* =========================================
+   COURSES SECTION
+========================================= */
+
+.all-courses-section{
+
+  padding-bottom:120px;
+}
+
+/* GRID */
+
+.courses-grid-page{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(2,1fr);
+
+  gap:30px;
+}
+
+/* =========================================
+   CARD
+========================================= */
+
+.course-page-card{
+
+  overflow:hidden;
+
+  border-radius:28px;
+
+  background:
+    rgba(10,18,40,0.92);
+
+  border:
+    1px solid rgba(255,255,255,0.05);
+
+  transition:0.35s ease;
+
+  box-shadow:
+    0 12px 30px rgba(0,0,0,0.28);
+}
+
+.course-page-card:hover{
+
+  transform:
+    translateY(-6px);
+
+  border:
+    1px solid rgba(212,175,55,0.14);
+}
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.course-page-image-wrapper{
+
+  position:relative;
+
+  width:100%;
+  height:240px;
+
+  overflow:hidden;
+}
+
+.course-page-image{
+
+  object-fit:cover;
+
+  transition:0.4s ease;
+}
+
+.course-page-card:hover .course-page-image{
+
+  transform:
+    scale(1.04);
+}
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.course-page-content{
+
+  padding:30px;
+}
+
+/* TOP */
+
+.course-page-top{
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  margin-bottom:24px;
+}
+
+/* ICON */
+
+.course-page-icon{
+
+  width:64px;
+  height:64px;
+
+  border-radius:18px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:
+    rgba(212,175,55,0.08);
+
+  border:
+    1px solid rgba(212,175,55,0.14);
+
+  color:#d4af37;
+}
+
+/* DURATION */
+
+.course-duration-badge{
+
+  padding:10px 16px;
+
+  border-radius:999px;
+
+  background:
+    rgba(255,255,255,0.04);
+
+  border:
+    1px solid rgba(255,255,255,0.05);
+
+  color:#cbd5e1;
+
+  font-size:14px;
+  font-weight:500;
+}
+
+/* TITLE */
+
+.course-page-content h2{
+
+  color:white;
+
+  font-size:30px;
+  line-height:1.2;
+  font-weight:700;
+
+  margin-bottom:16px;
+}
+
+/* DESCRIPTION */
+
+.course-page-content p{
+
+  color:#aeb8c7;
+
+  font-size:15px;
+  line-height:1.9;
+
+  margin-bottom:24px;
+}
+
+/* =========================================
+   META
+========================================= */
+
+.course-meta{
+
+  display:flex;
+  flex-wrap:wrap;
+
+  gap:12px;
+
+  margin-bottom:24px;
+}
+
+.course-meta div{
+
+  display:flex;
+  align-items:center;
+
+  gap:8px;
+
+  padding:10px 14px;
+
+  border-radius:12px;
+
+  background:
+    rgba(255,255,255,0.04);
+
+  border:
+    1px solid rgba(255,255,255,0.05);
+
+  color:#cbd5e1;
+
+  font-size:13px;
+}
+
+/* =========================================
+   INSTRUCTOR
+========================================= */
+
+.course-instructor{
+
+  color:#94a3b8;
+
+  font-size:14px;
+
+  margin-bottom:26px;
+}
+
+.course-instructor span{
+
+  color:#d4af37;
+
+  font-weight:600;
+
+  margin-left:6px;
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.course-page-buttons{
+
+  display:flex;
+
+  gap:14px;
+}
+
+/* DOWNLOAD */
+
+.download-btn{
+
+  flex:1;
+
+  height:52px;
+
+  border:none;
+
+  border-radius:14px;
+
+  background:
+    rgba(255,255,255,0.05);
+
+  border:
+    1px solid rgba(255,255,255,0.06);
+
+  color:white;
+
+  font-size:14px;
+  font-weight:500;
+
+  cursor:pointer;
+
+  transition:0.3s ease;
+}
+
+.download-btn:hover{
+
+  background:
+    rgba(255,255,255,0.08);
+}
+
+/* ENROLL */
+
+.enroll-course-btn{
+
+  height:52px;
+
+  padding:0 24px;
+
+  border:none;
+
+  border-radius:14px;
+
+  background:#d4af37;
+
+  color:#111827;
+
+  font-size:14px;
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:0.3s ease;
+}
+
+.enroll-course-btn:hover{
+
+  transform:
+    translateY(-2px);
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:1200px){
+
+  .courses-grid-page{
+
+    grid-template-columns:1fr;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .courses-hero{
+
+    padding-top:140px;
+    padding-bottom:80px;
+  }
+
+  .courses-hero-content h1{
+
+    font-size:44px;
+
+    line-height:1.1;
+  }
+
+  .courses-hero-content p{
+
+    font-size:16px;
+  }
+
+  .all-courses-section{
+
+    padding-bottom:90px;
+  }
+
+  .course-page-content{
+
+    padding:24px;
+  }
+
+  .course-page-content h2{
+
+    font-size:24px;
+  }
+
+  .course-page-buttons{
+
+    flex-direction:column;
+  }
+
+  .enroll-course-btn{
+
+    width:100%;
+  }
+
+}
+
+@media(max-width:480px){
+
+  .courses-hero-content h1{
+
+    font-size:36px;
+  }
+
+  .course-page-image-wrapper{
+
+    height:220px;
+  }
+
+}

@@ -11,12 +11,13 @@ import DashboardPreview from '@/components/home/DashboardPreview'
 import LabsShowcase from '@/components/home/LabsShowcase'
 import SuccessStories from '@/components/home/SuccessStories'
 import VerifyCTA from '@/components/home/VerifyCTA'
+import Footer from '@/components/layout/Footer'
 
 export default function HomePage() {
 
   return (
 
-    <main>
+    <main className="website-main">
 
       <Navbar />
 
@@ -80,8 +81,9 @@ export default function HomePage() {
 
       <Chatbot />
 
+      <Footer />
+
     </main>
 
   )
-
 }

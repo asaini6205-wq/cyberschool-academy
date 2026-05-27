@@ -1,0 +1,336 @@
+/* =========================================
+   LABS SHOWCASE SECTION
+========================================= */
+
+.labs-showcase-section{
+
+  position:relative;
+
+  padding:140px 0;
+
+  overflow:hidden;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(122,15,24,0.22),
+      transparent 30%
+    ),
+    linear-gradient(
+      180deg,
+      #020617 0%,
+      #030712 100%
+    );
+}
+
+/* GRID EFFECT */
+
+.labs-showcase-section::before{
+
+  content:'';
+
+  position:absolute;
+  inset:0;
+
+  background-image:
+    linear-gradient(
+      rgba(255,255,255,0.02) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,0.02) 1px,
+      transparent 1px
+    );
+
+  background-size:60px 60px;
+
+  opacity:0.25;
+
+  pointer-events:none;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.labs-header{
+
+  position:relative;
+  z-index:2;
+
+  text-align:center;
+
+  max-width:860px;
+
+  margin:0 auto 70px;
+}
+
+.labs-header h2{
+
+  font-size:66px;
+  line-height:1.08;
+  font-weight:700;
+
+  letter-spacing:-2px;
+
+  color:white;
+
+  margin:28px 0;
+}
+
+.labs-header p{
+
+  color:#94a3b8;
+
+  font-size:20px;
+  line-height:1.9;
+  font-weight:400;
+}
+
+/* =========================================
+   GRID
+========================================= */
+
+.labs-grid{
+
+  position:relative;
+  z-index:2;
+
+  display:grid;
+
+  grid-template-columns:
+    2fr 1fr 1fr;
+
+  gap:24px;
+}
+
+/* =========================================
+   CARD
+========================================= */
+
+.labs-card{
+
+  position:relative;
+
+  overflow:hidden;
+
+  height:520px;
+
+  border-radius:30px;
+
+  border:
+    1px solid rgba(255,255,255,0.06);
+
+  box-shadow:
+    0 25px 70px rgba(0,0,0,0.45);
+
+  transition:0.4s ease;
+}
+
+/* LARGE CARD */
+
+.labs-card.large{
+  height:520px;
+}
+
+/* HOVER */
+
+.labs-card:hover{
+
+  transform:
+    translateY(-8px);
+
+  border-color:
+    rgba(212,175,55,0.20);
+}
+
+/* IMAGE */
+
+.labs-image{
+
+  object-fit:cover;
+
+  transition:0.6s ease;
+}
+
+.labs-card:hover .labs-image{
+
+  transform:
+    scale(1.08);
+}
+
+/* OVERLAY */
+
+.labs-overlay{
+
+  position:absolute;
+  inset:0;
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:flex-end;
+
+  padding:34px;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(2,6,23,0.92),
+      rgba(2,6,23,0.15)
+    );
+
+  z-index:2;
+}
+
+/* GOLD GLOW */
+
+.labs-card::before{
+
+  content:'';
+
+  position:absolute;
+
+  width:220px;
+  height:220px;
+
+  border-radius:50%;
+
+  top:-90px;
+  right:-90px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(212,175,55,0.14),
+      transparent 70%
+    );
+
+  z-index:2;
+
+  opacity:0;
+
+  transition:0.4s ease;
+}
+
+.labs-card:hover::before{
+  opacity:1;
+}
+
+/* =========================================
+   TEXT
+========================================= */
+
+.labs-overlay h3{
+
+  color:white;
+
+  font-size:30px;
+  line-height:1.2;
+  font-weight:650;
+
+  margin-bottom:12px;
+}
+
+.labs-overlay p{
+
+  color:#cbd5e1;
+
+  font-size:16px;
+  line-height:1.8;
+  font-weight:400;
+
+  max-width:420px;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:1200px){
+
+  .labs-grid{
+
+    grid-template-columns:1fr 1fr;
+  }
+
+  .labs-card.large{
+
+    grid-column:span 2;
+  }
+
+  .labs-header h2{
+    font-size:56px;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .labs-showcase-section{
+    padding:90px 0;
+  }
+
+  .labs-grid{
+    grid-template-columns:1fr;
+  }
+
+  .labs-card.large{
+    grid-column:auto;
+  }
+
+  .labs-header{
+    margin-bottom:50px;
+  }
+
+  .labs-header h2{
+
+    font-size:42px;
+
+    letter-spacing:-1px;
+  }
+
+  .labs-header p{
+
+    font-size:16px;
+
+    line-height:1.8;
+  }
+
+  .labs-card,
+  .labs-card.large{
+
+    height:340px;
+
+    border-radius:24px;
+  }
+
+  .labs-overlay{
+
+    padding:24px;
+  }
+
+  .labs-overlay h3{
+
+    font-size:24px;
+  }
+
+}
+
+@media(max-width:480px){
+
+  .labs-header h2{
+    font-size:34px;
+  }
+
+  .labs-overlay h3{
+    font-size:22px;
+  }
+
+  .labs-overlay p{
+    font-size:14px;
+  }
+
+}

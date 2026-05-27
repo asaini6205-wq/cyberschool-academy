@@ -1,0 +1,466 @@
+/* =========================================
+   GLOBAL RESPONSIVE SYSTEM
+========================================= */
+
+/* LARGE DESKTOP */
+
+@media(max-width:1400px){
+
+  .container-custom{
+    max-width:1280px;
+  }
+
+  .hero-title{
+    font-size:74px;
+  }
+
+  .section-header h2{
+    font-size:56px;
+  }
+
+}
+
+/* =========================================
+   LAPTOP
+========================================= */
+
+@media(max-width:1200px){
+
+  .container-custom{
+    padding-left:32px;
+    padding-right:32px;
+  }
+
+  /* HERO */
+
+  .hero-wrapper{
+    gap:50px;
+  }
+
+  .hero-title{
+    font-size:64px;
+  }
+
+  .hero-image-box{
+    height:650px;
+  }
+
+  /* COURSES */
+
+  .courses-grid{
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+  /* WHY */
+
+  .why-grid{
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+  /* LABS */
+
+  .labs-wrapper{
+    gap:50px;
+  }
+
+  .labs-title{
+    font-size:56px;
+  }
+
+  /* TRUSTED */
+
+  .trusted-grid{
+    grid-template-columns:
+      repeat(3,1fr);
+  }
+
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media(max-width:992px){
+
+  /* SECTION SPACING */
+
+  section{
+    padding-top:90px !important;
+    padding-bottom:90px !important;
+  }
+
+  /* NAVBAR */
+
+  .main-nav-links{
+    display:none;
+  }
+
+  .login-nav-btn{
+    display:none;
+  }
+
+  /* HERO */
+
+  .hero-wrapper{
+    grid-template-columns:1fr;
+  }
+
+  .hero-right{
+    order:-1;
+  }
+
+  .hero-left{
+    text-align:center;
+  }
+
+  .hero-badge{
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .hero-subtitle{
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .hero-buttons{
+    justify-content:center;
+  }
+
+  .hero-image-box{
+    height:540px;
+  }
+
+  /* STATS */
+
+  .hero-stats{
+    grid-template-columns:
+      repeat(3,1fr);
+  }
+
+  /* LABS */
+
+  .labs-wrapper{
+    grid-template-columns:1fr;
+  }
+
+  .labs-image-card{
+    height:560px;
+  }
+
+  /* SHOWCASE */
+
+  .labs-grid{
+    grid-template-columns:1fr;
+  }
+
+  /* SUCCESS */
+
+  .success-grid{
+    grid-template-columns:1fr;
+  }
+
+  /* VERIFY CTA */
+
+  .verify-cta-card{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  /* LOGIN */
+
+  .login-wrapper{
+    grid-template-columns:1fr;
+  }
+
+  .login-right{
+    display:none;
+  }
+
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:768px){
+
+  .container-custom{
+    padding-left:20px;
+    padding-right:20px;
+  }
+
+  /* SECTION HEADERS */
+
+  .section-header{
+    margin-bottom:50px;
+  }
+
+  .section-header h2{
+    font-size:38px;
+    line-height:1.15;
+  }
+
+  .section-header p{
+    font-size:16px;
+    line-height:1.7;
+  }
+
+  .section-badge{
+    font-size:13px;
+    padding:10px 18px;
+  }
+
+  /* NAVBAR */
+
+  .main-navbar{
+    height:82px;
+  }
+
+  .main-navbar-container{
+    padding:0 20px;
+  }
+
+  .main-logo img{
+    width:46px;
+    height:46px;
+  }
+
+  .main-logo h2{
+    font-size:20px;
+  }
+
+  .main-logo p{
+    font-size:11px;
+  }
+
+  .enroll-nav-btn{
+    height:44px;
+    padding:0 18px;
+    font-size:14px;
+  }
+
+  /* HERO */
+
+  .hero-section{
+    padding-top:120px !important;
+  }
+
+  .hero-title{
+    font-size:46px;
+    line-height:1.08;
+  }
+
+  .hero-subtitle{
+    font-size:16px;
+  }
+
+  .hero-buttons{
+    flex-direction:column;
+    align-items:stretch;
+  }
+
+  .hero-primary-btn,
+  .hero-secondary-btn{
+    width:100%;
+  }
+
+  .hero-stats{
+    grid-template-columns:1fr;
+  }
+
+  .hero-image-box{
+    height:420px;
+    border-radius:24px;
+  }
+
+  /* COURSES */
+
+  .courses-grid{
+    grid-template-columns:1fr;
+    gap:22px;
+  }
+
+  .course-card{
+    min-height:auto;
+    padding:28px 24px;
+  }
+
+  .course-card h3{
+    font-size:28px;
+  }
+
+  /* WHY */
+
+  .why-grid{
+    grid-template-columns:1fr;
+  }
+
+  .why-card{
+    padding:28px 24px;
+  }
+
+  /* LABS */
+
+  .labs-title{
+    font-size:40px;
+  }
+
+  .labs-text{
+    font-size:16px;
+  }
+
+  .labs-list{
+    grid-template-columns:1fr;
+  }
+
+  .labs-image-card{
+    height:420px;
+    border-radius:24px;
+  }
+
+  /* TRUSTED */
+
+  .trusted-grid{
+    grid-template-columns:
+      repeat(2,1fr);
+
+    gap:16px;
+  }
+
+  .trusted-item{
+    height:76px;
+    font-size:17px;
+  }
+
+  /* DASHBOARD */
+
+  .dashboard-header h2{
+    font-size:40px;
+  }
+
+  .dashboard-header p{
+    font-size:16px;
+  }
+
+  /* SHOWCASE */
+
+  .labs-card,
+  .labs-card.large{
+    height:320px;
+  }
+
+  .labs-overlay{
+    padding:24px;
+  }
+
+  .labs-overlay h3{
+    font-size:24px;
+  }
+
+  /* SUCCESS */
+
+  .success-title{
+    font-size:40px;
+  }
+
+  .success-description{
+    font-size:16px;
+  }
+
+  .success-image-wrapper{
+    height:260px;
+  }
+
+  /* VERIFY */
+
+  .verify-container{
+    padding:40px 24px;
+  }
+
+  .verify-title{
+    font-size:40px;
+  }
+
+  .verify-description{
+    font-size:16px;
+  }
+
+  .verify-form{
+    flex-direction:column;
+  }
+
+  .verify-input,
+  .verify-button{
+    width:100%;
+  }
+
+  /* LOGIN */
+
+  .login-page{
+    padding:100px 16px 40px;
+  }
+
+  .login-left{
+    padding:40px 24px;
+  }
+
+  .login-title{
+    font-size:42px;
+  }
+
+  .login-description{
+    font-size:16px;
+  }
+
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media(max-width:480px){
+
+  .hero-title{
+    font-size:36px;
+  }
+
+  .section-header h2{
+    font-size:32px;
+  }
+
+  .labs-title{
+    font-size:34px;
+  }
+
+  .dashboard-header h2{
+    font-size:34px;
+  }
+
+  .success-title{
+    font-size:34px;
+  }
+
+  .verify-title{
+    font-size:34px;
+  }
+
+  .login-title{
+    font-size:34px;
+  }
+
+  .trusted-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero-primary-btn,
+  .hero-secondary-btn,
+  .course-btn,
+  .login-btn,
+  .verify-button{
+    height:54px;
+  }
+
+}

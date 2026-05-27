@@ -1,22 +1,28 @@
+import type { Metadata } from 'next'
 import './globals.css'
 
-import ThemeProvider from '@/components/providers/ThemeProvider'
+
+
+export const metadata: Metadata = {
+  title: 'CyberSchool Academy',
+  description: 'Advanced Cybersecurity Education Platform',
+}
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode
-}) {
+}>) {
+
   return (
-    <html
-      lang="en"
-      suppressHydrationWarning
-    >
+    <html lang="en">
+
       <body>
-        <ThemeProvider>
-          {children}
-        </ThemeProvider>
+
+        {children}
+
       </body>
+
     </html>
   )
 }

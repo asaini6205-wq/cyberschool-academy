@@ -1,8 +1,18 @@
 'use client'
 
+import Navbar from '@/components/layout/Navbar'
+import Footer from '@/components/layout/Footer'
+
 import { useState } from 'react'
 
 import { useRouter } from 'next/navigation'
+
+import {
+  ShieldCheck,
+  Lock,
+  Mail,
+  User,
+} from 'lucide-react'
 
 import { supabase } from '@/lib/supabase'
 
@@ -10,221 +20,445 @@ export default function LoginPage() {
 
   const router = useRouter()
 
-  const [isSignup, setIsSignup] = useState(false)
+  const [isSignup, setIsSignup] =
+    useState(false)
 
-  const [email, setEmail] = useState('')
+  const [fullName, setFullName] =
+    useState('')
 
-  const [password, setPassword] = useState('')
+  const [email, setEmail] =
+    useState('')
 
-  const [loading, setLoading] = useState(false)
+  const [password, setPassword] =
+    useState('')
 
-  const [message, setMessage] = useState('')
+  const [loading, setLoading] =
+    useState(false)
 
-  async function handleAuth() {
+  /* =====================================
+     LOGIN
+  ===================================== */
 
-    if (!email || !password) {
-      setMessage('Please fill all fields.')
-      return
-    }
+  async function handleLogin(
+    e: React.FormEvent
+  ) {
+
+    e.preventDefault()
 
     setLoading(true)
 
-    setMessage('')
+    const {
 
-    try {
+      error,
 
-      if (isSignup) {
+    } = await supabase.auth.signInWithPassword({
 
-        const { error } = await supabase.auth.signUp({
-          email,
-          password,
-        })
+      email,
+      password,
 
-        if (error) {
+    })
 
-          setMessage(error.message)
+    if (error) {
 
-        } else {
+      alert(error.message)
 
-          setMessage(
-            'Account created successfully! You can now login.'
-          )
+      setLoading(false)
 
-          setIsSignup(false)
-        }
-
-      } else {
-
-        const { error } =
-          await supabase.auth.signInWithPassword({
-            email,
-            password,
-          })
-
-        if (error) {
-
-          setMessage(error.message)
-
-        } else {
-
-          setMessage('Login successful! Redirecting...')
-
-          setTimeout(() => {
-            router.push('/dashboard')
-          }, 1200)
-        }
-      }
-
-    } catch (err) {
-
-      setMessage('Something went wrong.')
+      return
 
     }
 
+    alert('Login Successful')
+
+    router.push('/dashboard')
+
     setLoading(false)
+
+  }
+
+  /* =====================================
+     SIGNUP
+  ===================================== */
+
+  async function handleSignup(
+    e: React.FormEvent
+  ) {
+
+    e.preventDefault()
+
+    setLoading(true)
+
+    const {
+
+      error,
+
+    } = await supabase.auth.signUp({
+
+      email,
+      password,
+
+      options: {
+
+        data: {
+
+          full_name: fullName,
+
+        },
+
+      },
+
+    })
+
+    if (error) {
+
+      alert(error.message)
+
+      setLoading(false)
+
+      return
+
+    }
+
+    alert(
+      'Account created successfully'
+    )
+
+    router.push('/dashboard')
+
+    setLoading(false)
+
+  }
+
+  /* =====================================
+     GOOGLE LOGIN
+  ===================================== */
+
+  async function handleGoogleLogin() {
+
+    await supabase.auth.signInWithOAuth({
+
+      provider:'google',
+
+      options: {
+
+        redirectTo:
+          'http://localhost:3000/dashboard',
+
+      },
+
+    })
+
   }
 
   return (
 
-    <main className="login-page">
+    <>
 
-      <div className="login-wrapper">
+      <Navbar />
 
-        {/* LEFT SIDE */}
+      <main className="login-page">
 
-        <div className="login-left">
+        <section className="login-section">
 
-          <div className="login-badge">
-            CyberSchool Secure Portal
-          </div>
+          <div className="login-wrapper">
 
-          <h1 className="login-title">
-            {
-              isSignup
-                ? 'Create Account'
-                : 'Welcome Back'
-            }
-          </h1>
+            {/* LEFT */}
 
-          <p className="login-description">
-            Access your cybersecurity dashboard,
-            certificates, courses and labs.
-          </p>
+            <div className="login-left">
 
-          <div className="login-form">
+              <div className="login-badge">
 
-            <input
-              type="email"
-              placeholder="Email Address"
-              value={email}
-              onChange={(e) =>
-                setEmail(e.target.value)
-              }
-              className="login-input"
-            />
+                Secure Student Portal
 
-            <input
-              type="password"
-              placeholder="Password"
-              value={password}
-              onChange={(e) =>
-                setPassword(e.target.value)
-              }
-              className="login-input"
-            />
+              </div>
 
-            <button
-              onClick={handleAuth}
-              className="login-btn"
-            >
-              {
-                loading
-                  ? 'Please wait...'
-                  : isSignup
-                  ? 'Create Account'
-                  : 'Secure Login'
-              }
-            </button>
+              <h1>
 
-            {
-              message && (
-                <p className="login-message">
-                  {message}
+                Access Your
+                <span> CyberSchool </span>
+                Dashboard
+
+              </h1>
+
+              <p>
+
+                Track courses,
+                cyber labs,
+                assignments,
+                certificates and
+                cybersecurity learning progress.
+
+              </p>
+
+              {/* FEATURES */}
+
+              <div className="login-features">
+
+                <div className="login-feature">
+
+                  <ShieldCheck size={18} />
+
+                  Secure Authentication
+
+                </div>
+
+                <div className="login-feature">
+
+                  <ShieldCheck size={18} />
+
+                  Encrypted Dashboard Access
+
+                </div>
+
+                <div className="login-feature">
+
+                  <ShieldCheck size={18} />
+
+                  AI Powered Learning Portal
+
+                </div>
+
+              </div>
+
+            </div>
+
+            {/* RIGHT */}
+
+            <div className="login-box">
+
+              {/* TOP */}
+
+              <div className="login-top">
+
+                <h2>
+
+                  {
+
+                    isSignup
+                      ? 'Create Account'
+                      : 'Welcome Back'
+
+                  }
+
+                </h2>
+
+                <p>
+
+                  {
+
+                    isSignup
+                      ? 'Start your cybersecurity journey'
+                      : 'Login to continue learning'
+
+                  }
+
                 </p>
-              )
-            }
 
-          </div>
-
-          <div className="login-switch">
-
-            <span>
-              {
-                isSignup
-                  ? 'Already have an account?'
-                  : "Don't have an account?"
-              }
-            </span>
-
-            <button
-              onClick={() =>
-                setIsSignup(!isSignup)
-              }
-              className="switch-btn"
-            >
-              {
-                isSignup
-                  ? 'Login'
-                  : 'Sign Up'
-              }
-            </button>
-
-          </div>
-
-        </div>
-
-        {/* RIGHT SIDE */}
-
-        <div className="login-right">
-
-          <div className="login-card">
-
-            <h2>
-              CyberSchool Academy
-            </h2>
-
-            <p>
-              Advanced Cybersecurity Education,
-              Ethical Hacking, Digital Forensics,
-              OSINT and Security Training.
-            </p>
-
-            <div className="login-stats">
-
-              <div>
-                <h3>15K+</h3>
-                <span>Learners</span>
               </div>
 
-              <div>
-                <h3>120+</h3>
-                <span>Cyber Labs</span>
-              </div>
+              {/* FORM */}
 
-              <div>
-                <h3>95%</h3>
-                <span>Placements</span>
+              <form
+                className="login-form"
+                onSubmit={
+                  isSignup
+                    ? handleSignup
+                    : handleLogin
+                }
+              >
+
+                {/* GOOGLE */}
+
+                <button
+                  type="button"
+                  className="google-login-btn"
+                  onClick={handleGoogleLogin}
+                >
+
+                  <img
+                    src="https://www.svgrepo.com/show/475656/google-color.svg"
+                    alt="Google"
+                  />
+
+                  Continue with Google
+
+                </button>
+
+                {/* DIVIDER */}
+
+                <div className="login-divider">
+
+                  <span>
+
+                    OR
+
+                  </span>
+
+                </div>
+
+                {/* FULL NAME */}
+
+                {
+
+                  isSignup && (
+
+                    <div className="login-input-box">
+
+                      <User size={18} />
+
+                      <input
+                        type="text"
+                        placeholder="Full Name"
+                        value={fullName}
+                        onChange={(e) =>
+                          setFullName(
+                            e.target.value
+                          )
+                        }
+                        required
+                      />
+
+                    </div>
+
+                  )
+
+                }
+
+                {/* EMAIL */}
+
+                <div className="login-input-box">
+
+                  <Mail size={18} />
+
+                  <input
+                    type="email"
+                    placeholder="Email Address"
+                    value={email}
+                    onChange={(e) =>
+                      setEmail(
+                        e.target.value
+                      )
+                    }
+                    required
+                  />
+
+                </div>
+
+                {/* PASSWORD */}
+
+                <div className="login-input-box">
+
+                  <Lock size={18} />
+
+                  <input
+                    type="password"
+                    placeholder="Password"
+                    value={password}
+                    onChange={(e) =>
+                      setPassword(
+                        e.target.value
+                      )
+                    }
+                    required
+                  />
+
+                </div>
+
+                {/* LOGIN OPTIONS */}
+
+                {
+
+                  !isSignup && (
+
+                    <div className="login-options">
+
+                      <label>
+
+                        <input type="checkbox" />
+
+                        Remember Me
+
+                      </label>
+
+                      <button
+                        type="button"
+                        className="forgot-btn"
+                      >
+
+                        Forgot Password?
+
+                      </button>
+
+                    </div>
+
+                  )
+
+                }
+
+                {/* SUBMIT */}
+
+                <button
+                  type="submit"
+                  className="login-submit-btn"
+                >
+
+                  {
+
+                    loading
+                      ? 'Please Wait...'
+                      : isSignup
+                        ? 'Create Account'
+                        : 'Login To Dashboard'
+
+                  }
+
+                </button>
+
+              </form>
+
+              {/* BOTTOM */}
+
+              <div className="login-bottom">
+
+                {
+
+                  isSignup
+                    ? 'Already have an account?'
+                    : 'Don’t have an account?'
+
+                }
+
+                <button
+                  className="switch-auth-btn"
+                  onClick={() =>
+                    setIsSignup(!isSignup)
+                  }
+                >
+
+                  {
+
+                    isSignup
+                      ? 'Login'
+                      : 'Sign Up'
+
+                  }
+
+                </button>
+
               </div>
 
             </div>
 
           </div>
 
-        </div>
+        </section>
 
-      </div>
+      </main>
 
-    </main>
+      <Footer />
+
+    </>
 
   )
+
 }

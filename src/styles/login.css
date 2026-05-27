@@ -1,0 +1,590 @@
+/* =========================================
+   LOGIN PAGE
+========================================= */
+
+.login-page{
+
+  width:100%;
+
+  min-height:100vh;
+
+  overflow:hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      #020617 0%,
+      #030712 100%
+    );
+
+  padding-top:120px;
+}
+
+/* =========================================
+   SECTION
+========================================= */
+
+.login-section{
+
+  padding:80px 20px 120px;
+}
+
+/* =========================================
+   WRAPPER
+========================================= */
+
+.login-wrapper{
+
+  width:100%;
+  max-width:1280px;
+
+  margin:0 auto;
+
+  display:grid;
+
+  grid-template-columns:
+    1fr 0.9fr;
+
+  gap:40px;
+
+  align-items:center;
+}
+
+/* =========================================
+   LEFT SIDE
+========================================= */
+
+.login-left{
+
+  padding-right:40px;
+}
+
+/* BADGE */
+
+.login-badge{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  padding:10px 18px;
+
+  border-radius:999px;
+
+  background:
+    rgba(201,162,39,0.08);
+
+  border:
+    1px solid rgba(201,162,39,0.12);
+
+  color:#c9a227;
+
+  font-size:13px;
+  font-weight:600;
+
+  margin-bottom:28px;
+}
+
+/* TITLE */
+
+.login-left h1{
+
+  color:white;
+
+  font-size:58px;
+  line-height:1.08;
+  font-weight:650;
+
+  letter-spacing:-1.3px;
+
+  margin-bottom:24px;
+}
+
+/* GOLD */
+
+.login-left h1 span{
+
+  color:#c9a227;
+}
+
+/* DESCRIPTION */
+
+.login-left p{
+
+  max-width:620px;
+
+  color:#98a6ba;
+
+  font-size:16px;
+  line-height:1.9;
+
+  margin-bottom:38px;
+}
+
+/* FEATURES */
+
+.login-features{
+
+  display:flex;
+  flex-direction:column;
+
+  gap:18px;
+}
+
+/* FEATURE */
+
+.login-feature{
+
+  display:flex;
+  align-items:center;
+
+  gap:14px;
+
+  color:#cbd5e1;
+
+  font-size:15px;
+  font-weight:500;
+}
+
+.login-feature svg{
+
+  color:#c9a227;
+}
+
+/* =========================================
+   RIGHT SIDE
+========================================= */
+
+.login-box{
+
+  position:relative;
+
+  padding:42px;
+
+  border-radius:32px;
+
+  background:
+    rgba(10,18,40,0.92);
+
+  border:
+    1px solid rgba(255,255,255,0.05);
+
+  overflow:hidden;
+
+  box-shadow:
+    0 12px 30px rgba(0,0,0,0.24);
+}
+
+/* GLOW */
+
+.login-box::before{
+
+  content:'';
+
+  position:absolute;
+
+  top:-120px;
+  right:-120px;
+
+  width:260px;
+  height:260px;
+
+  border-radius:50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(201,162,39,0.08),
+      transparent 70%
+    );
+}
+
+/* =========================================
+   TOP
+========================================= */
+
+.login-top{
+
+  position:relative;
+  z-index:2;
+
+  margin-bottom:34px;
+}
+
+.login-top h2{
+
+  color:white;
+
+  font-size:36px;
+  font-weight:650;
+
+  margin-bottom:10px;
+}
+
+.login-top p{
+
+  color:#98a6ba;
+
+  font-size:15px;
+}
+
+/* =========================================
+   FORM
+========================================= */
+
+.login-form{
+
+  position:relative;
+  z-index:2;
+
+  display:flex;
+  flex-direction:column;
+
+  gap:20px;
+}
+
+/* =========================================
+   GOOGLE LOGIN
+========================================= */
+
+.google-login-btn{
+
+  width:100%;
+
+  height:58px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  gap:14px;
+
+  border:none;
+
+  border-radius:18px;
+
+  background:
+    rgba(255,255,255,0.04);
+
+  border:
+    1px solid rgba(255,255,255,0.06);
+
+  color:white;
+
+  font-size:15px;
+  font-weight:500;
+
+  cursor:pointer;
+
+  transition:0.3s ease;
+}
+
+.google-login-btn:hover{
+
+  background:
+    rgba(255,255,255,0.06);
+
+  transform:
+    translateY(-2px);
+}
+
+.google-login-btn img{
+
+  width:22px;
+  height:22px;
+}
+
+/* =========================================
+   DIVIDER
+========================================= */
+
+.login-divider{
+
+  position:relative;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  margin:2px 0;
+}
+
+.login-divider::before{
+
+  content:'';
+
+  position:absolute;
+
+  width:100%;
+  height:1px;
+
+  background:
+    rgba(255,255,255,0.06);
+}
+
+.login-divider span{
+
+  position:relative;
+  z-index:2;
+
+  padding:0 16px;
+
+  background:
+    #0a1228;
+
+  color:#64748b;
+
+  font-size:13px;
+  font-weight:500;
+}
+
+/* =========================================
+   INPUT BOX
+========================================= */
+
+.login-input-box{
+
+  display:flex;
+  align-items:center;
+
+  gap:14px;
+
+  height:62px;
+
+  padding:0 20px;
+
+  border-radius:18px;
+
+  background:
+    rgba(255,255,255,0.03);
+
+  border:
+    1px solid rgba(255,255,255,0.06);
+
+  transition:0.3s ease;
+}
+
+.login-input-box:focus-within{
+
+  border:
+    1px solid rgba(201,162,39,0.20);
+
+  background:
+    rgba(255,255,255,0.05);
+}
+
+/* ICON */
+
+.login-input-box svg{
+
+  color:#64748b;
+
+  flex-shrink:0;
+}
+
+/* INPUT */
+
+.login-input-box input{
+
+  width:100%;
+
+  background:none;
+
+  border:none;
+
+  outline:none;
+
+  color:white;
+
+  font-size:15px;
+}
+
+.login-input-box input::placeholder{
+
+  color:#64748b;
+}
+
+/* =========================================
+   OPTIONS
+========================================= */
+
+.login-options{
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  gap:20px;
+}
+
+/* LABEL */
+
+.login-options label{
+
+  display:flex;
+  align-items:center;
+
+  gap:10px;
+
+  color:#94a3b8;
+
+  font-size:14px;
+}
+
+.login-options input{
+
+  accent-color:#c9a227;
+}
+
+/* FORGOT */
+
+.forgot-btn{
+
+  background:none;
+
+  border:none;
+
+  color:#c9a227;
+
+  font-size:14px;
+  font-weight:500;
+
+  cursor:pointer;
+}
+
+/* =========================================
+   SUBMIT BUTTON
+========================================= */
+
+.login-submit-btn{
+
+  width:100%;
+
+  height:58px;
+
+  border:none;
+
+  border-radius:18px;
+
+  background:#c9a227;
+
+  color:#111827;
+
+  font-size:15px;
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:0.3s ease;
+}
+
+.login-submit-btn:hover{
+
+  transform:
+    translateY(-2px);
+}
+
+/* =========================================
+   BOTTOM
+========================================= */
+
+.login-bottom{
+
+  margin-top:28px;
+
+  text-align:center;
+
+  color:#94a3b8;
+
+  font-size:14px;
+}
+
+/* SWITCH BUTTON */
+
+.switch-auth-btn{
+
+  margin-left:8px;
+
+  background:none;
+
+  border:none;
+
+  color:#c9a227;
+
+  font-size:14px;
+  font-weight:600;
+
+  cursor:pointer;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:1100px){
+
+  .login-wrapper{
+
+    grid-template-columns:1fr;
+
+    gap:50px;
+  }
+
+  .login-left{
+
+    padding-right:0;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .login-section{
+
+    padding:60px 16px 90px;
+  }
+
+  .login-left h1{
+
+    font-size:42px;
+
+    line-height:1.1;
+  }
+
+  .login-left p{
+
+    font-size:15px;
+  }
+
+  .login-box{
+
+    padding:32px 24px;
+  }
+
+  .login-top h2{
+
+    font-size:30px;
+  }
+
+}
+
+@media(max-width:480px){
+
+  .login-left h1{
+
+    font-size:34px;
+  }
+
+  .login-options{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+  }
+
+  .login-box{
+
+    border-radius:26px;
+  }
+
+}

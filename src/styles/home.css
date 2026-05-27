@@ -1,0 +1,534 @@
+.home-page{
+  position:relative;
+
+  overflow:hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      #020617 0%,
+      #030712 100%
+    );
+}
+
+/* =========================================
+   TRUSTED SECTION
+========================================= */
+
+.trusted-section{
+  position:relative;
+
+  padding:90px 0;
+
+  overflow:hidden;
+
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(212,175,55,0.08),
+      transparent 30%
+    ),
+    linear-gradient(
+      180deg,
+      #030712 0%,
+      #040814 100%
+    );
+}
+
+/* GRID EFFECT */
+
+.trusted-section::before{
+  content:'';
+
+  position:absolute;
+  inset:0;
+
+  background-image:
+    linear-gradient(
+      rgba(255,255,255,0.02) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,0.02) 1px,
+      transparent 1px
+    );
+
+  background-size:60px 60px;
+
+  pointer-events:none;
+}
+
+/* TITLE */
+
+.trusted-title{
+  text-align:center;
+
+  color:#94a3b8;
+
+  font-size:18px;
+  font-weight:600;
+
+  margin-bottom:40px;
+}
+
+/* GRID */
+
+.trusted-grid{
+  display:grid;
+
+  grid-template-columns:
+    repeat(6,1fr);
+
+  gap:22px;
+}
+
+/* ITEM */
+
+.trusted-item{
+
+  height:90px;
+
+  border-radius:24px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(12,18,40,0.95),
+      rgba(7,10,25,0.98)
+    );
+
+  border:
+    1px solid
+    rgba(255,255,255,0.06);
+
+  color:white;
+
+  font-size:22px;
+  font-weight:800;
+
+  transition:0.35s;
+
+  backdrop-filter:blur(14px);
+
+  box-shadow:
+    0 10px 30px
+    rgba(0,0,0,0.30);
+}
+
+.trusted-item:hover{
+
+  transform:
+    translateY(-6px);
+
+  border-color:
+    rgba(212,175,55,0.20);
+
+  color:#f5d76e;
+
+  box-shadow:
+    0 20px 40px
+    rgba(0,0,0,0.45);
+}
+
+/* =========================================
+   CHATBOT FLOATING BUTTON
+========================================= */
+
+.chatbot-wrapper{
+  position:fixed;
+
+  right:24px;
+  bottom:24px;
+
+  z-index:999;
+}
+
+.chatbot-btn{
+
+  width:70px;
+  height:70px;
+
+  border-radius:50%;
+
+  border:none;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f5d76e,
+      #d4af37
+    );
+
+  color:#111827;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  box-shadow:
+    0 15px 40px
+    rgba(212,175,55,0.35);
+
+  cursor:pointer;
+
+  transition:0.3s;
+}
+
+.chatbot-btn:hover{
+
+  transform:
+    scale(1.08);
+
+  box-shadow:
+    0 20px 50px
+    rgba(212,175,55,0.45);
+}
+
+/* =========================================
+   COMMON GLASS CARD
+========================================= */
+
+.glass-card{
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(12,18,40,0.95),
+      rgba(7,10,25,0.98)
+    );
+
+  border:
+    1px solid
+    rgba(255,255,255,0.06);
+
+  backdrop-filter:blur(14px);
+
+  box-shadow:
+    0 10px 40px
+    rgba(0,0,0,0.30);
+}
+
+/* =========================================
+   COMMON SECTION DIVIDER
+========================================= */
+
+.section-divider{
+
+  width:100%;
+  height:1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,0.08),
+      transparent
+    );
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:1200px){
+
+  .trusted-grid{
+    grid-template-columns:
+      repeat(3,1fr);
+  }
+
+}
+
+@media(max-width:768px){
+
+  .trusted-section{
+    padding:70px 0;
+  }
+
+  .trusted-grid{
+    grid-template-columns:
+      repeat(2,1fr);
+
+    gap:16px;
+  }
+
+  .trusted-item{
+    height:76px;
+
+    font-size:18px;
+
+    border-radius:18px;
+  }
+
+  .trusted-title{
+    font-size:16px;
+  }
+
+  .chatbot-btn{
+    width:60px;
+    height:60px;
+  }
+
+}
+
+@media(max-width:480px){
+
+  .trusted-grid{
+    grid-template-columns:1fr;
+  }
+
+}
+
+/* =========================================
+   TRUSTED SECTION
+========================================= */
+
+.trusted-section{
+
+  position:relative;
+
+  padding:70px 0;
+
+  overflow:hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      #030712 0%,
+      #020617 100%
+    );
+
+  border-top:
+    1px solid
+    rgba(255,255,255,0.05);
+
+  border-bottom:
+    1px solid
+    rgba(255,255,255,0.05);
+}
+
+/* GRID EFFECT */
+
+.trusted-section::before{
+
+  content:'';
+
+  position:absolute;
+  inset:0;
+
+  background-image:
+    linear-gradient(
+      rgba(255,255,255,0.02) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,0.02) 1px,
+      transparent 1px
+    );
+
+  background-size:60px 60px;
+
+  opacity:0.25;
+
+  pointer-events:none;
+}
+
+/* =========================================
+   TITLE
+========================================= */
+
+.trusted-title{
+
+  position:relative;
+  z-index:2;
+
+  text-align:center;
+
+  color:#cbd5e1;
+
+  font-size:20px;
+  font-weight:600;
+
+  margin-bottom:42px;
+
+  letter-spacing:0.3px;
+}
+
+/* =========================================
+   GRID
+========================================= */
+
+.trusted-grid{
+
+  position:relative;
+  z-index:2;
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(6,1fr);
+
+  gap:24px;
+
+  align-items:center;
+}
+
+/* =========================================
+   ITEM
+========================================= */
+
+.trusted-item{
+
+  position:relative;
+
+  height:100px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:24px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(12,18,40,0.95),
+      rgba(7,10,25,0.98)
+    );
+
+  border:
+    1px solid
+    rgba(255,255,255,0.06);
+
+  color:white;
+
+  font-size:22px;
+  font-weight:700;
+
+  transition:0.35s ease;
+
+  overflow:hidden;
+
+  backdrop-filter:blur(12px);
+
+  box-shadow:
+    0 12px 30px
+    rgba(0,0,0,0.30);
+}
+
+/* GOLD GLOW */
+
+.trusted-item::before{
+
+  content:'';
+
+  position:absolute;
+
+  width:180px;
+  height:180px;
+
+  top:-100px;
+  right:-100px;
+
+  border-radius:50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(212,175,55,0.14),
+      transparent 70%
+    );
+
+  opacity:0;
+
+  transition:0.4s ease;
+}
+
+.trusted-item:hover::before{
+  opacity:1;
+}
+
+/* HOVER */
+
+.trusted-item:hover{
+
+  transform:
+    translateY(-8px);
+
+  border-color:
+    rgba(212,175,55,0.22);
+
+  color:#f5d76e;
+
+  box-shadow:
+    0 20px 45px
+    rgba(0,0,0,0.45);
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:1200px){
+
+  .trusted-grid{
+
+    grid-template-columns:
+      repeat(3,1fr);
+
+  }
+
+}
+
+@media(max-width:768px){
+
+  .trusted-section{
+    padding:55px 0;
+  }
+
+  .trusted-title{
+
+    font-size:17px;
+
+    line-height:1.7;
+
+    margin-bottom:28px;
+  }
+
+  .trusted-grid{
+
+    grid-template-columns:
+      repeat(2,1fr);
+
+    gap:18px;
+  }
+
+  .trusted-item{
+
+    height:80px;
+
+    border-radius:20px;
+
+    font-size:18px;
+  }
+
+}
+
+@media(max-width:480px){
+
+  .trusted-grid{
+    grid-template-columns:1fr;
+  }
+
+  .trusted-item{
+    height:74px;
+    font-size:17px;
+  }
+
+}

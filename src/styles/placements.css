@@ -1,0 +1,474 @@
+/* =========================================
+   PLACEMENTS PAGE
+========================================= */
+
+.placements-page{
+
+  width:100%;
+
+  overflow:hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      #020617 0%,
+      #030712 100%
+    );
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.placements-hero{
+
+  position:relative;
+
+  padding-top:170px;
+  padding-bottom:90px;
+
+  overflow:hidden;
+}
+
+.placements-hero::before{
+
+  content:'';
+
+  position:absolute;
+
+  top:-180px;
+  right:-180px;
+
+  width:480px;
+  height:480px;
+
+  border-radius:50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(201,162,39,0.06),
+      transparent 70%
+    );
+}
+
+/* HERO CONTENT */
+
+.placements-hero-content{
+
+  position:relative;
+  z-index:2;
+
+  max-width:820px;
+
+  margin:0 auto;
+
+  text-align:center;
+}
+
+/* TITLE */
+
+.placements-hero-content h1{
+
+  color:white;
+
+  font-size:56px;
+  line-height:1.1;
+  font-weight:650;
+
+  letter-spacing:-1.2px;
+
+  margin-bottom:22px;
+}
+
+/* GOLD */
+
+.placements-hero-content h1 span{
+
+  color:#c9a227;
+}
+
+/* DESCRIPTION */
+
+.placements-hero-content p{
+
+  max-width:720px;
+
+  margin:0 auto;
+
+  color:#98a6ba;
+
+  font-size:17px;
+  line-height:1.9;
+}
+
+/* =========================================
+   STATS
+========================================= */
+
+.placement-stats{
+
+  padding-bottom:90px;
+}
+
+.placement-stats-grid{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(4,1fr);
+
+  gap:22px;
+}
+
+/* CARD */
+
+.placement-stat-card{
+
+  padding:34px 26px;
+
+  border-radius:22px;
+
+  background:
+    rgba(10,18,40,0.92);
+
+  border:
+    1px solid rgba(255,255,255,0.05);
+
+  text-align:center;
+
+  transition:0.3s ease;
+
+  box-shadow:
+    0 10px 24px rgba(0,0,0,0.20);
+}
+
+.placement-stat-card:hover{
+
+  transform:
+    translateY(-3px);
+
+  border:
+    1px solid rgba(201,162,39,0.12);
+}
+
+/* ICON */
+
+.placement-stat-card svg{
+
+  color:#c9a227;
+
+  margin-bottom:18px;
+}
+
+/* NUMBER */
+
+.placement-stat-card h2{
+
+  color:white;
+
+  font-size:30px;
+  font-weight:650;
+
+  margin-bottom:10px;
+}
+
+/* TEXT */
+
+.placement-stat-card p{
+
+  color:#98a6ba;
+
+  font-size:14px;
+}
+
+/* =========================================
+   STUDENTS
+========================================= */
+
+.placements-section{
+
+  padding-bottom:110px;
+}
+
+/* GRID */
+
+.placements-grid{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap:26px;
+}
+
+/* CARD */
+
+.placement-card{
+
+  overflow:hidden;
+
+  border-radius:26px;
+
+  background:
+    rgba(10,18,40,0.92);
+
+  border:
+    1px solid rgba(255,255,255,0.05);
+
+  transition:0.3s ease;
+
+  box-shadow:
+    0 10px 24px rgba(0,0,0,0.20);
+}
+
+.placement-card:hover{
+
+  transform:
+    translateY(-3px);
+
+  border:
+    1px solid rgba(201,162,39,0.12);
+}
+
+/* IMAGE */
+
+.placement-image-wrapper{
+
+  position:relative;
+
+  width:100%;
+  height:240px;
+
+  overflow:hidden;
+}
+
+.placement-image{
+
+  object-fit:cover;
+
+  transition:0.35s ease;
+}
+
+.placement-card:hover .placement-image{
+
+  transform:
+    scale(1.03);
+}
+
+/* CONTENT */
+
+.placement-content{
+
+  padding:26px;
+}
+
+/* PACKAGE */
+
+.placement-package{
+
+  display:inline-flex;
+
+  padding:10px 16px;
+
+  border-radius:999px;
+
+  background:
+    rgba(201,162,39,0.08);
+
+  border:
+    1px solid rgba(201,162,39,0.12);
+
+  color:#c9a227;
+
+  font-size:13px;
+  font-weight:600;
+
+  margin-bottom:20px;
+}
+
+/* NAME */
+
+.placement-content h3{
+
+  color:white;
+
+  font-size:24px;
+  font-weight:650;
+
+  margin-bottom:10px;
+}
+
+/* ROLE */
+
+.placement-content p{
+
+  color:#98a6ba;
+
+  font-size:15px;
+
+  margin-bottom:14px;
+}
+
+/* COMPANY */
+
+.placement-content span{
+
+  color:#c9a227;
+
+  font-size:14px;
+  font-weight:500;
+}
+
+/* =========================================
+   COMPANIES
+========================================= */
+
+.companies-section{
+
+  padding-bottom:120px;
+}
+
+/* GRID */
+
+.companies-grid{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(4,1fr);
+
+  gap:20px;
+}
+
+/* CARD */
+
+.company-card{
+
+  height:100px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:20px;
+
+  background:
+    rgba(10,18,40,0.92);
+
+  border:
+    1px solid rgba(255,255,255,0.05);
+
+  color:white;
+
+  font-size:17px;
+  font-weight:500;
+
+  transition:0.3s ease;
+}
+
+.company-card:hover{
+
+  transform:
+    translateY(-3px);
+
+  color:#c9a227;
+
+  border:
+    1px solid rgba(201,162,39,0.12);
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:1200px){
+
+  .placement-stats-grid{
+
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+  .placements-grid{
+
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+  .companies-grid{
+
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+}
+
+@media(max-width:768px){
+
+  .placements-hero{
+
+    padding-top:140px;
+    padding-bottom:80px;
+  }
+
+  .placements-hero-content h1{
+
+    font-size:42px;
+
+    line-height:1.12;
+  }
+
+  .placements-hero-content p{
+
+    font-size:16px;
+  }
+
+  .placement-stats{
+
+    padding-bottom:80px;
+  }
+
+  .placements-section{
+
+    padding-bottom:90px;
+  }
+
+  .companies-section{
+
+    padding-bottom:90px;
+  }
+
+  .placement-stats-grid,
+  .placements-grid,
+  .companies-grid{
+
+    grid-template-columns:1fr;
+  }
+
+  .placement-content{
+
+    padding:24px;
+  }
+
+  .placement-content h3{
+
+    font-size:22px;
+  }
+
+}
+
+@media(max-width:480px){
+
+  .placements-hero-content h1{
+
+    font-size:34px;
+  }
+
+  .placement-image-wrapper{
+
+    height:220px;
+  }
+
+}
