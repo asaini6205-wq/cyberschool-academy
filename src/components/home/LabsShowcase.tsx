@@ -13,22 +13,31 @@ export default function LabsShowcase() {
         <div className="labs-header">
 
           <div className="section-badge">
+
             Real Practical Training
+
           </div>
 
           <h2>
+
             Experience Real Cybersecurity Labs
+
           </h2>
 
           <p>
-            Practice ethical hacking, SOC monitoring,
-            malware analysis and digital forensics
-            inside immersive real-world cyber labs.
+
+            Practice ethical hacking,
+            SOC monitoring,
+            malware analysis
+            and digital forensics.
+
           </p>
 
         </div>
 
         <div className="labs-grid">
+
+          {/* CARD 1 */}
 
           <div className="labs-card large">
 
@@ -41,16 +50,24 @@ export default function LabsShowcase() {
 
             <div className="labs-overlay">
 
-              <h3>Ethical Hacking Labs</h3>
+              <h3>
+
+                Ethical Hacking Labs
+
+              </h3>
 
               <p>
-                Practice penetration testing and
-                exploit analysis safely.
+
+                Practice penetration testing
+                safely in real-world labs.
+
               </p>
 
             </div>
 
           </div>
+
+          {/* CARD 2 */}
 
           <div className="labs-card">
 
@@ -63,11 +80,17 @@ export default function LabsShowcase() {
 
             <div className="labs-overlay">
 
-              <h3>SOC Monitoring</h3>
+              <h3>
+
+                SOC Monitoring
+
+              </h3>
 
             </div>
 
           </div>
+
+          {/* CARD 3 */}
 
           <div className="labs-card">
 
@@ -80,7 +103,11 @@ export default function LabsShowcase() {
 
             <div className="labs-overlay">
 
-              <h3>Digital Forensics</h3>
+              <h3>
+
+                Digital Forensics
+
+              </h3>
 
             </div>
 

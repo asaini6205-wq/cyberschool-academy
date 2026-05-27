@@ -2224,3 +2224,31 @@ button {
   }
 
 }
+
+/* FINAL IMAGE FIXES */
+
+.hero-image-card {
+
+  position: relative !important;
+
+  overflow: hidden;
+}
+
+.hero-image-wrapper {
+
+  position: relative !important;
+}
+
+.labs-card {
+
+  position: relative !important;
+
+  overflow: hidden;
+}
+
+.success-image-wrapper {
+
+  position: relative !important;
+
+  overflow: hidden;
+}

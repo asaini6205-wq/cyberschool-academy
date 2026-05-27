@@ -41,24 +41,36 @@ export default function Hero() {
               duration: 0.8
             }}
 
+            className="hero-left"
+
           >
+
+            {/* BADGE */}
 
             <div className="hero-badge">
 
               <ShieldCheck size={18} />
 
-              India’s Trusted Cybersecurity Academy
+              <span>
+                India’s Trusted Cybersecurity Academy
+              </span>
 
             </div>
 
+            {/* TITLE */}
+
             <h1 className="hero-title">
 
-              Learn Cybersecurity
+              Learn
+              <span> Cybersecurity </span>
+
               <br />
 
               From Experts
 
             </h1>
+
+            {/* DESCRIPTION */}
 
             <p className="hero-subtitle">
 
@@ -107,7 +119,10 @@ export default function Hero() {
 
               <div className="stat-box">
 
-                <Users size={24} />
+                <Users
+                  size={26}
+                  className="stat-icon"
+                />
 
                 <h3>15K+</h3>
 
@@ -117,7 +132,10 @@ export default function Hero() {
 
               <div className="stat-box">
 
-                <Award size={24} />
+                <Award
+                  size={26}
+                  className="stat-icon"
+                />
 
                 <h3>120+</h3>
 
@@ -127,7 +145,10 @@ export default function Hero() {
 
               <div className="stat-box">
 
-                <Star size={24} />
+                <Star
+                  size={26}
+                  className="stat-icon"
+                />
 
                 <h3>95%</h3>
 
@@ -157,11 +178,11 @@ export default function Hero() {
               duration: 0.8
             }}
 
-            className="hero-image-wrapper"
+            className="hero-right"
 
           >
 
-            <div className="hero-image-card">
+            <div className="hero-image-box">
 
               <Image
 
@@ -172,6 +193,8 @@ export default function Hero() {
                 fill
 
                 priority
+
+                sizes="(max-width: 768px) 100vw, 50vw"
 
                 className="hero-image"
 

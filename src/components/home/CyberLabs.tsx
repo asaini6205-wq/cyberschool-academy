@@ -75,7 +75,7 @@ export default function CyberLabs() {
             <div className="labs-image-card">
 
               <Image
-                src="/lab.jpg"
+                src="/lab1.jpg"
                 alt="Cyber Lab"
                 fill
                 className="labs-image"
